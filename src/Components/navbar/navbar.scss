@@ -1,0 +1,24 @@
+@import "../../styles/styles.scss";
+
+.navUl {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $navColor;
+  height: 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  padding-right: 1rem;
+  color: $reactColor;
+}
+
+a:hover {
+  color: pink;
+}

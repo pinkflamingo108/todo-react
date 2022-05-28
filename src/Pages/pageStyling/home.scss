@@ -1,0 +1,159 @@
+@import "../../styles/styles.scss";
+
+.wrapper {
+  background: $pageColor;
+  min-height: 100vh;
+}
+.headerContainer {
+  display: flex;
+  padding-top: 3rem;
+  justify-content: center;
+}
+
+.header {
+  color: $darkReactColor;
+  font-size: 3rem;
+}
+
+.formContainer {
+  margin-top: 4rem;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.mainInput {
+  padding: 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 20rem;
+  margin-right: 0.5rem;
+}
+
+.mainBtn {
+  border-radius: 5px;
+  height: 3rem;
+  border: none;
+  width: 10rem;
+  font-size: 20px;
+  background-color: #ff6489;
+  transition: 0.5s ease-in-out;
+}
+
+.mainBtn:hover {
+  background-color: #64d7ff;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover {
+  border: 3px solid $reactColor;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.dataContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.horizontal {
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+}
+
+.listItem {
+  font-size: 20px;
+  color: lightblue;
+  margin-right: 0.5rem;
+}
+
+.deleteBtn {
+  border-radius: 5px;
+  border: none;
+  width: 10rem;
+  font-size: 20px;
+  background-color: #6489ff;
+  transition: 0.5s ease-in-out;
+  height: 2.5rem;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+  background-color: #64d7ff;
+}
+
+@media (max-width: 900px) {
+  .header {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    font-size: 2rem;
+  }
+}
+// @media (max-width: 600px) {
+//   .header {
+//     font-size: 1.5rem;
+//   }
+
+//   .mainInput {
+//     padding: 15px;
+
+//     width: 15rem;
+//     margin-right: 0.5rem;
+//   }
+
+//   .mainBtn {
+//     border-radius: 5px;
+//     border: none;
+//     width: 10rem;
+//   }
+// }
+
+@media (max-width: 600px) {
+  .formContainer {
+    margin-top: 2.5rem;
+  }
+
+  .mainBtn {
+    height: 2rem;
+  }
+
+  .header {
+    font-size: 1.3rem;
+  }
+
+  .btnContainer {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .formContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainInput {
+    padding: 10px;
+    font-size: 10px;
+  }
+}
