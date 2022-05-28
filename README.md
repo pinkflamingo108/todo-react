@@ -1,6 +1,3 @@
-This project uses SAD
-
-
 This project utilizes React, SASS and React Router Dom.
 
 To install SASS you need to enter npm install node-sass
