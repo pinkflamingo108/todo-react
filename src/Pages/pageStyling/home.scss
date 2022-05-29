@@ -139,6 +139,20 @@ input[type="text"]:hover {
   .header {
     font-size: 2rem;
   }
+
+  .horizontal {
+    flex-direction: column;
+  }
+
+  .listItem {
+    margin-bottom: 0.5rem;
+  }
+
+  .deleteBtn,
+  .editBtn,
+  .changeInput {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -172,6 +186,6 @@ input[type="text"]:hover {
 
   .mainInput {
     padding: 10px;
-    font-size: 10px;
+    font-size: 15px;
   }
 }
