@@ -5,9 +5,14 @@ import Footer from "../Components/footer/Footer";
 function Home() {
   const [name, setName] = useState("");
   const [array, setArray] = useState([]);
+  const [showInput, setShowInput] = useState(true);
+  const [first, setFirst] = useState("");
+
+// Here we will move everything entered on the input unto an array so that we can later loop over it and display the information. 
 
   function handleSubmit(e) {
     e.preventDefault();
+    //IN here we find the id of the each value that will be submitted and the item that will be submited from the input
     let values = {
       id: Math.floor(Math.random() * 1000),
       list: name,
@@ -21,9 +26,22 @@ function Home() {
     setName("");
   }
 
+//When we click on the delete button we return all items that dont correspond to the element that we may want to delete
+
   function deleteItem(id) {
     const newArray = array.filter((item) => item.id !== id);
     setArray(newArray);
+  }
+
+  function displayInput() {
+    setShowInput(!showInput);
+  }
+
+  function changeText(id) {
+    const test = array.find((info) => info.id === id);
+    test.list = "";
+    setName(first);
+    test.list += first;
   }
 
   return (
@@ -50,6 +68,7 @@ function Home() {
             </div>
           </form>
         </div>
+
         <div className="dataContainer">
           <ul>
             {array.map((info, id) => (
@@ -57,12 +76,45 @@ function Home() {
                 <li id="listItem" className="listItem">
                   {id + 1}. {info.list}
                 </li>
+                <div>
+                  <button
+                    className="deleteBtn"
+                    onClick={() => {
+                      deleteItem(info.id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </div>
+
                 <button
-                  className="deleteBtn"
-                  onClick={() => deleteItem(info.id)}
+                  onClick={displayInput}
+                  className={showInput ? "editBtn" : "noDisplay"}
                 >
-                  Delete
+                  Edit Todo
                 </button>
+                {showInput ? (
+                  ""
+                ) : (
+                  <input
+                    className="changeInput"
+                    type="text"
+                    placeholder="change the input"
+                    onChange={(e) => {
+                      setFirst(e.target.value);
+                    }}
+                  />
+                )}
+                {showInput ? (
+                  ""
+                ) : (
+                  <button
+                    onClick={() => changeText(info.id)}
+                    className="modifyBtn"
+                  >
+                    Change
+                  </button>
+                )}
               </div>
             ))}
           </ul>
