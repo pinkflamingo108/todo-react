@@ -2,7 +2,8 @@ This project utilizes React, SASS and React Router Dom.
 
 To install SASS you need to enter npm install node-sass
 To install React Router Dom npm install react-router-dom@6
-This project start with npm start
+This project starts with npm start
+To install node modules enter npm install
 .
 
 # Getting Started with Create React App
