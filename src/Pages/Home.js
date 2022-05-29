@@ -8,7 +8,7 @@ function Home() {
   const [showInput, setShowInput] = useState(true);
   const [first, setFirst] = useState("");
 
-// Here we will move everything entered on the input unto an array so that we can later loop over it and display the information. 
+  // Here we will move everything entered on the input unto an array so that we can later loop over it and display the information.
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -26,17 +26,22 @@ function Home() {
     setName("");
   }
 
-//When we click on the delete button we return all items that dont correspond to the element that we may want to delete
+  //When we click on the delete button we return all items that dont correspond to the element that we may want to delete
 
   function deleteItem(id) {
     const newArray = array.filter((item) => item.id !== id);
     setArray(newArray);
   }
 
+  //Here we are toggling elements from the dom
+
   function displayInput() {
     setShowInput(!showInput);
   }
 
+  /*We want to be able to have the capability of editing the todo. Here we find the element, clear the value
+
+*/
   function changeText(id) {
     const test = array.find((info) => info.id === id);
     test.list = "";
