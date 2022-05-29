@@ -43,10 +43,14 @@ function Home() {
 
 */
   function changeText(id) {
-    const test = array.find((info) => info.id === id);
-    test.list = "";
-    setName(first);
-    test.list += first;
+    [...array].map((todo) => {
+      if (todo.id === id) {
+        todo.list = first;
+      }
+      return todo;
+    });
+
+    setFirst("");
   }
 
   return (
