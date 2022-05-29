@@ -34,6 +34,16 @@
   margin-right: 0.5rem;
 }
 
+.changeInput {
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 13rem;
+  margin-left: 0.5rem;
+}
+
 .mainBtn {
   border-radius: 5px;
   height: 3rem;
@@ -78,7 +88,9 @@ input[type="text"]:hover {
   margin-right: 0.5rem;
 }
 
-.deleteBtn {
+.deleteBtn,
+.modifyBtn,
+.editBtn {
   border-radius: 5px;
   border: none;
   width: 10rem;
@@ -86,6 +98,30 @@ input[type="text"]:hover {
   background-color: #6489ff;
   transition: 0.5s ease-in-out;
   height: 2.5rem;
+}
+
+.editBtn {
+  background-color: #8d64ff;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background-color: #f172b5;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.modifyBtn {
+  background-color: #72f1ae;
+  margin-left: 0.5rem;
+}
+
+.modifyBtn:hover {
+  background-color: #f172b5;
+  cursor: pointer;
 }
 
 .deleteBtn:hover {
@@ -104,24 +140,6 @@ input[type="text"]:hover {
     font-size: 2rem;
   }
 }
-// @media (max-width: 600px) {
-//   .header {
-//     font-size: 1.5rem;
-//   }
-
-//   .mainInput {
-//     padding: 15px;
-
-//     width: 15rem;
-//     margin-right: 0.5rem;
-//   }
-
-//   .mainBtn {
-//     border-radius: 5px;
-//     border: none;
-//     width: 10rem;
-//   }
-// }
 
 @media (max-width: 600px) {
   .formContainer {
